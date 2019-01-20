@@ -26,7 +26,7 @@ public class MyStatusActivity extends AppCompatActivity {
 
             switch (index) {
                 case 0:
-                    getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, new LoanFragment()).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, LoanFragment.loanInstance(jsonString)).commit();
                     break;
                 case 1:
                     getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, new MarketingFragment()).commit();

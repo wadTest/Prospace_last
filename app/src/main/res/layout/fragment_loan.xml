@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".LoanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--Head-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Loan" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-</FrameLayout>
+        <!--jon_no-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Job_no"
+            android:textSize="@dimen/size18"
+            android:textStyle="bold" />
+
+
+        <!--job_event-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center_horizontal"
+            android:text="Job_event"
+            android:textSize="@dimen/size18"
+            android:textStyle="bold" />
+
+        <!--<customer_name-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="center_horizontal"
+            android:text="customer_name"
+            android:textSize="@dimen/size18"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--Control-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcyclerlerLoan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

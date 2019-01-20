@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--jon_no-->
+        <TextView
+            android:text="Job_no"
+            android:id="@+id/txtJobNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/size18" />
+
+
+        <!--job_event-->
+        <TextView
+            android:text="Job_event"
+            android:id="@+id/txtJobEvent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textSize="@dimen/size18" />
+
+        <!--<customer_name-->
+        <TextView
+            android:text="customer_name"
+            android:id="@+id/txtCustomerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:textSize="@dimen/size18" />
+    </LinearLayout>
+
+
+</LinearLayout>
