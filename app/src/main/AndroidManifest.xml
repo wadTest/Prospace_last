@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.prospec.prospecservice">
+    <!-- เพื่อให้เข้าถึงมือถือ ในการโทรออก -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- เชื่อมต่อ อินเตอร์เน็ต -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- อนุญาตให้เปิดรุปภาพใน sd card -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logoapp"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MyStatusActivity"></activity>
+        <activity android:name=".utility.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- ชื่อ class กับตั้งค่าให้ล็อกหน้าจอ ไม่ให้หมุนได้ -->
+        <!-- หน้าแรก หน้าล็อกอิน -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าลงทะเบียน -->
+        <activity
+            android:name=".MenuActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าส่ง e-mail -->
+        <activity
+            android:name=".EmailActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าเบอร์โทรติดต่อ -->
+        <activity
+            android:name=".CallActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าเมนูตัวเลือกรายการ -->
+        <activity
+            android:name=".MenuAssetActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าเมนูข้อความ -->
+        <activity
+            android:name=".MessageActivity"
+            android:screenOrientation="portrait" /> <!-- หน้ากรอกข้อความ -->
+        <activity
+            android:name=".SignInActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าที่ดิน -->
+        <activity
+            android:name=".LandBuildingActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าที่ดิน+อาคาร -->
+        <activity
+            android:name=".BuildingActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าห้องชุด -->
+        <activity
+            android:name=".RoomActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าแสดงสถานะ -->
+        <activity
+            android:name=".StatusActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าลงทะเบียน -->
+        <activity
+            android:name=".LineActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าเช็คสถานะงานของประเมิน -->
+        <activity
+            android:name=".AssessmentActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าส่งข้อความแบบย่อ -->
+        <activity
+            android:name=".CustomDialogActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าสถานะสินเชื่อ -->
+        <activity
+            android:name=".status.LoanOfficerActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าห้องชุดหรือพื้นที่เช่า -->
+        <activity
+            android:name=".CondoRentActivity"
+            android:screenOrientation="portrait" /> <!-- หน้าที่ดินพร้อมสิ่งปลูกสร้าง(สัญญาเช่า) -->
+        <activity
+            android:name=".BuildindRentActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
