@@ -123,6 +123,7 @@ public class StatusActivity extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(StatusActivity.this, MyStatusActivity.class);
                         intent.putExtra("index", 0);
+                        intent.putExtra("json", jsonString);
                         startActivity(intent);
                     }
 
@@ -160,6 +161,7 @@ public class StatusActivity extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(StatusActivity.this, MyStatusActivity.class);
                         intent.putExtra("index", 1);
+                        intent.putExtra("json", jsonString);
                         startActivity(intent);
                     }
 
@@ -197,6 +199,7 @@ public class StatusActivity extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(StatusActivity.this, MyStatusActivity.class);
                         intent.putExtra("index", 2);
+                        intent.putExtra("json", jsonString);
                         startActivity(intent);
 
                     }
