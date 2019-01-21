@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -72,6 +73,7 @@ public class LoanFragment extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
     }
 
