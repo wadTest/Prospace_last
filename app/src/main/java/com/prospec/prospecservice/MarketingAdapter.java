@@ -7,17 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
-public class LoanAdapter extends RecyclerView.Adapter<LoanAdapter.LoanViewHolder>{
+public class MarketingAdapter extends RecyclerView.Adapter<MarketingAdapter.LoanViewHolder>{
 
     private Context context;
     private ArrayList<String> jobNoStringArrayList, jobEventStringArrayList, cusNameStringArrayList;
     private OnClickItem onClickItem;
     private LayoutInflater layoutInflater;
 
-    public LoanAdapter(Context context, ArrayList<String> jobNoStringArrayList, ArrayList<String> jobEventStringArrayList, ArrayList<String> cusNameStringArrayList, OnClickItem onClickItem) {
+    public MarketingAdapter(Context context, ArrayList<String> jobNoStringArrayList, ArrayList<String> jobEventStringArrayList, ArrayList<String> cusNameStringArrayList, OnClickItem onClickItem) {
         this.layoutInflater = LayoutInflater.from(context);
         this.jobNoStringArrayList = jobNoStringArrayList;
         this.jobEventStringArrayList = jobEventStringArrayList;
@@ -29,7 +28,7 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanAdapter.LoanViewHolder
     @Override
     public LoanViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = layoutInflater.inflate(R.layout.recyclerview_loan, parent, false);
+        View view = layoutInflater.inflate(R.layout.recyclerview_marketing, parent, false);
         LoanViewHolder loanViewHolder = new LoanViewHolder(view);
 
         return loanViewHolder;
@@ -70,7 +69,6 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanAdapter.LoanViewHolder
             jobNoTextView = itemView.findViewById(R.id.txtJobNo);
             jobEventTextView = itemView.findViewById(R.id.txtJobEvent);
             cusNameTextView = itemView.findViewById(R.id.txtCusName);
-
 
         }
     }    //Second Class

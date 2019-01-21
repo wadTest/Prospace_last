@@ -27,6 +27,7 @@ public class LoanFragment extends Fragment {
     }
 
     public static LoanFragment loanInstance(String jsonString) {
+
         LoanFragment loanFragment = new LoanFragment();
         Bundle bundle = new Bundle();
         bundle.putString("json", jsonString);
@@ -39,42 +40,40 @@ public class LoanFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
 //        Create RecyclerView
-
-        RecyclerView recyclerView = getView().findViewById(R.id.rcyclerlerLoan);
+        RecyclerView recyclerView = getView().findViewById(R.id.recyclerLoan);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
+
         try {
 
             JSONArray jsonArray = new JSONArray(getArguments().getString("json"));
 
             ArrayList<String> jobNoStringArrayList = new ArrayList<>();
             ArrayList<String> jobEventStringArrayList = new ArrayList<>();
-            ArrayList<String> cumNamStringArrayList = new ArrayList<>();
+            ArrayList<String> cutNameStringArrayList = new ArrayList<>();
 
             for (int i = 0; i < jsonArray.length(); i += 1) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 jobNoStringArrayList.add(jsonObject.getString("job_no"));
                 jobEventStringArrayList.add(jsonObject.getString("job_event"));
-                cumNamStringArrayList.add(jsonObject.getString("customer_name"));
+                cutNameStringArrayList.add(jsonObject.getString("customer_name"));
 
             }
 
-            LoanAdapter loanAdapter = new LoanAdapter(getActivity(), jobNoStringArrayList, jobEventStringArrayList, cumNamStringArrayList, new OnClickItem() {
+            LoanAdapter loanAdapter = new LoanAdapter(getActivity(), jobNoStringArrayList, jobEventStringArrayList, cutNameStringArrayList, new OnClickItem() {
                 @Override
                 public void onClickItem(View view, int position) {
 
                 }
             });
-
             recyclerView.setAdapter(loanAdapter);
 
         } catch (Exception e) {
             e.printStackTrace();
-
         }
+
 
     }
 

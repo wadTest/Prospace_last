@@ -6,9 +6,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 public class MyStatusActivity extends AppCompatActivity {
+
     private int index;
     private String jsonString;
-    private String[] titleStrings = {"สินเชื่อ", "ตลาด", "ประเมิน"};
+    private String[] titleStrings = {"เจ้าหน้าที่สินเชื่อ", "เจ้าหน้าที่การตลาด", "เจ้าหน้าที่ประเมิน"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class MyStatusActivity extends AppCompatActivity {
 //        Create Toolbar
         createToolbar();
 
-//        การสร้าง Fragment
+//        Create Fragment
         if (savedInstanceState == null) {
 
             switch (index) {
@@ -29,7 +30,7 @@ public class MyStatusActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, LoanFragment.loanInstance(jsonString)).commit();
                     break;
                 case 1:
-                    getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, new MarketingFragment()).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, MarketingFragment.marketingInstance(jsonString)).commit();
                     break;
                 case 2:
                     getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, new ValuerFragment()).commit();
@@ -37,7 +38,8 @@ public class MyStatusActivity extends AppCompatActivity {
             }
 
         }
-    }
+
+    }   // Main Method
 
     private void createToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbarMyStatus);
@@ -52,4 +54,6 @@ public class MyStatusActivity extends AppCompatActivity {
             }
         });
     }
-}
+
+
+}   // Main Class

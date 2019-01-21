@@ -39,6 +39,14 @@ public class StatusActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("สถานะงาน");
         toolbar.setSubtitle("กรอกรหัสงานเพื่อตรวจสอบสถานะ");
         toolbar.setLogo(R.drawable.logo_prospec);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 //        รับกิจกรรม
         getEvent();
@@ -68,8 +76,6 @@ public class StatusActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("Logout", MODE_PRIVATE);
         String nameLogin = sharedPreferences.getString("NameLogin", "");
         Log.d("20JanV2", "nameLogin ==> " + nameLogin);
-
-
 
         MyConstant myConstant = new MyConstant();
 

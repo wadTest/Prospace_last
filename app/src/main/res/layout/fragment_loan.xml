@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".LoanFragment">
 
     <!--Head-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:padding="5dp"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <!--jon_no-->
+        <!--job_no-->
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:text="Job_no"
-            android:textSize="@dimen/size18"
-            android:textStyle="bold" />
+            android:textSize="18sp"
+            android:text="รหัสงาน"
+            android:layout_weight="1.2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <!--cus_name-->
+        <TextView
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="ชื่อลูกค้า"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
 
 
         <!--job_event-->
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
             android:gravity="center_horizontal"
-            android:text="Job_event"
-            android:textSize="@dimen/size18"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="สถานะงาน"
+            android:layout_weight="1.8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
 
-        <!--<customer_name-->
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2.5"
-            android:gravity="center_horizontal"
-            android:text="customer_name"
-            android:textSize="@dimen/size18"
-            android:textStyle="bold" />
+
+
     </LinearLayout>
 
-    <!--Control-->
+    <!--Content-->
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcyclerlerLoan"
+        android:id="@+id/recyclerLoan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-    </android.support.v7.widget.RecyclerView>
 </LinearLayout>
