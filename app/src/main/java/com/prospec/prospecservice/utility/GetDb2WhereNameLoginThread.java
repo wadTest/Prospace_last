@@ -37,7 +37,5 @@ public class GetDb2WhereNameLoginThread extends AsyncTask<String, Void, String> 
             return null;
         }
 
-
-
     }
 }

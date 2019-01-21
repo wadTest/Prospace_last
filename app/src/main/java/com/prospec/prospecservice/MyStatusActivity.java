@@ -9,7 +9,7 @@ public class MyStatusActivity extends AppCompatActivity {
 
     private int index;
     private String jsonString;
-    private String[] titleStrings = {"เจ้าหน้าที่สินเชื่อ", "เจ้าหน้าที่การตลาด", "เจ้าหน้าที่ประเมิน"};
+    private String[] titleStrings = {"รายละเอียดงานของท่าน"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +29,7 @@ public class MyStatusActivity extends AppCompatActivity {
                 case 0:
                     getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, LoanFragment.loanInstance(jsonString)).commit();
                     break;
-                case 1:
-                    getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, MarketingFragment.marketingInstance(jsonString)).commit();
-                    break;
-                case 2:
-                    getSupportFragmentManager().beginTransaction().add(R.id.contentMyStatusFragment, new ValuerFragment()).commit();
-                    break;
+
             }
 
         }
