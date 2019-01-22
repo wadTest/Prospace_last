@@ -27,7 +27,15 @@ public class LineActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("ติดต่อทาง@line");
         toolbar.setSubtitle("เลือกเมนูในการติดต่อทางไลน์");
-        toolbar.setLogo(R.drawable.logo_prospec);
+//        toolbar.setLogo(R.drawable.logo_prospec);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         //        Get Event การรับกิจกรรมจาก ตัวแปร กดปุ่ม 1-13

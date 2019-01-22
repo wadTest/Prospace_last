@@ -1,6 +1,8 @@
 package com.prospec.prospecservice;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,7 +16,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,9 +50,9 @@ public class LoanFragment extends Fragment {
 
             JSONArray jsonArray = new JSONArray(getArguments().getString("json"));
 
-            ArrayList<String> jobNoStringArrayList = new ArrayList<>();
-            ArrayList<String> jobEventStringArrayList = new ArrayList<>();
-            ArrayList<String> cutNameStringArrayList = new ArrayList<>();
+            final ArrayList<String> jobNoStringArrayList = new ArrayList<>();
+            final ArrayList<String> jobEventStringArrayList = new ArrayList<>();
+            final ArrayList<String> cutNameStringArrayList = new ArrayList<>();
 
             for (int i = 0; i < jsonArray.length(); i += 1) {
 
@@ -65,7 +66,7 @@ public class LoanFragment extends Fragment {
             LoanAdapter loanAdapter = new LoanAdapter(getActivity(), jobNoStringArrayList, jobEventStringArrayList, cutNameStringArrayList, new OnClickItem() {
                 @Override
                 public void onClickItem(View view, int position) {
-
+                    showAlert(jobNoStringArrayList.get(position), jobEventStringArrayList.get(position), cutNameStringArrayList.get(position));
                 }
             });
             recyclerView.setAdapter(loanAdapter);
@@ -75,6 +76,15 @@ public class LoanFragment extends Fragment {
         }
 
 
+    }
+
+    private void showAlert(String jobNo, String jobEvent, String cusName) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+        alertDialogBuilder.setTitle("Detail").setMessage("jobNo ==> " + jobNo + "\n" + "jobEvent ==> " + jobEvent + "\n" + "cusName ==> " + cusName).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        }).show();
     }
 
     @Override

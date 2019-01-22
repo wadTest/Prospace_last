@@ -9,7 +9,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.prospec.prospecservice.utility.AddUserToServer;
 import com.prospec.prospecservice.utility.MyAlert;
 
