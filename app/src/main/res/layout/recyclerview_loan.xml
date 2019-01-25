@@ -41,7 +41,56 @@
         <!--job_event-->
         <TextView
             android:id="@+id/txtMarketing"
+            android:text="เจ้าหน้าที่การตลาด"
             android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--Loanofficer1,2,3-->
+        <TextView
+            android:id="@+id/txtLoan"
+            android:textSize="16sp"
+            android:text="เจ้าหน้าที่สินเชื่อ"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/txtPhone"-->
+            <!--android:textSize="16sp"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:textSize="16sp"
+            android:text="เบอร์โทรศัพท์มือถือ"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:textSize="16sp"
+            android:text="อีเมล์"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtImage"
+            android:textSize="16sp"
+            android:text="รูปภาพ"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtTidto"
+            android:textSize="16sp"
+            android:text="รูปภาพ"
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
